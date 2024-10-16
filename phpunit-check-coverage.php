@@ -2,14 +2,15 @@
 
 declare(strict_types=1);
 
-$threshold = $argv[1] ?? 60;
-$filename = $argv[2] ?? 'coverage.xml';
-
 if (PHP_SAPI !== 'cli') {
     echo "\"bin/check-coverage\" should be invoked via the CLI version on PHP\n";
 
     exit(1);
 }
+
+$threshold = $argv[1] ?? 95;
+$filename = $argv[2] ?? 'coverage.xml';
+
 if (!filter_var($threshold, FILTER_VALIDATE_INT)) {
     echo "Threshold parameter must be integer ({$threshold} given)\n";
 
