@@ -1,7 +1,11 @@
 {
     "name": "softavis/coverage-phpunit",
     "description": "Simple script for tests coverage threshold percent",
+    "keywords": ["phpunit", "coverage", "threshold", "pipeline", "hook"],
     "type": "library",
+    "bin": [
+        "bin/coverage-phpunit"
+    ],
     "require": {
         "php": "^7.4 || ^8.0",
         "ext-xml": "*"

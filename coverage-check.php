@@ -2,10 +2,6 @@
 
 declare(strict_types=1);
 
-error_reporting(-1);
-
-defined('STDERR') || define('STDERR', fopen('php://stderr', 'wb'));
-
 $threshold = $argv[1] ?? 60;
 $filename = $argv[2] ?? 'coverage.xml';
 
